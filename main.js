@@ -2,7 +2,8 @@ const trigger = document.querySelector('.trigger');
 const close = document.querySelector('.close');
 const mobilenav = document.querySelector('.mobile-nav');
 trigger.addEventListener('click',opennav);
-close.addEventListener('click',opennav);
+
+window.addEventListener('resize',closenavOnResize);
 
 function opennav() {
     if(mobilenav.dataset.visibility == 'false'){
@@ -16,4 +17,9 @@ function opennav() {
         mobilenav.classList.remove('animate-nav');
         mobilenav.setAttribute('data-visibility', 'false');
     }
+}
+
+function closenavOnResize() {
+    mobilenav.dataset.visibility = 'false';
+    mobilenav.style.display = 'none';
 }

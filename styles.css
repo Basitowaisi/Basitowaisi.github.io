@@ -43,7 +43,7 @@ header {
 }
 .mobile-nav {
 	opacity: 0;
-	transition: opacity 1s;
+	transition: opacity 500ms;
 	display:none;
 }
 .animate-nav {
@@ -94,20 +94,33 @@ nav a  {
 	}
 	.mobile-nav{
 		position: absolute;
-		left:40px;
-		top:0px;
-		padding-top: 20px;
-		height: 100vh; 
-		background: red;
-		width: 100vw;
+		left:0;
+		right:0;
+		top:60px;
+		background: #ecf0f1;
+		width: 98vw;
 		text-align: center;
-		transform: translateX(-50%);
-		flex-direction: column;
+		display: flex;
 		justify-content: center;
-		align-items: center;
+		margin: 0 auto;
+		box-shadow: 0 6px 16px rgba(0,0,0,.5);
+		z-index: 44;
+		flex-wrap: wrap;
+		perspective: 1000px;
 	}
 	.mobile-nav a {
 		display: block;
+		flex-basis: 100%;
+		color: #4d545d;
+		padding: 10px 0;
+		font-weight: 700;
+		border-bottom: .1rem solid #d7d7d7;
+
+	}
+	.mobile-nav a:hover {
+		background: #16a085;
+		border-color: #1abc9c;
+		color: #fff;
 	}
 }
 @media only screen and (max-width: 779px) and (min-width:500px){
