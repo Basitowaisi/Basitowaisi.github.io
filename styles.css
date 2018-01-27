@@ -41,6 +41,14 @@ header {
 	color: #fff;
 	padding: 15px;
 }
+.mobile-nav {
+	opacity: 0;
+	transition: opacity 1s;
+	display:none;
+}
+.animate-nav {
+	opacity: 1;
+}
 
 nav {
 	max-width: 100%;
@@ -83,6 +91,23 @@ nav a  {
 	}
 	nav ul {
 		display: none;
+	}
+	.mobile-nav{
+		position: absolute;
+		left:40px;
+		top:0px;
+		padding-top: 20px;
+		height: 100vh; 
+		background: red;
+		width: 100vw;
+		text-align: center;
+		transform: translateX(-50%);
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.mobile-nav a {
+		display: block;
 	}
 }
 @media only screen and (max-width: 779px) and (min-width:500px){
