@@ -5,7 +5,8 @@ trigger.addEventListener('click',opennav);
 
 window.addEventListener('resize',closenavOnResize);
 
-function opennav() {
+function opennav(e) {
+	e.preventDefault();
     if(mobilenav.dataset.visibility == 'false'){
     mobilenav.style.display='flex';
     mobilenav.setAttribute('data-visibility','true');
@@ -19,7 +20,10 @@ function opennav() {
     }
 }
 
-function closenavOnResize() {
-    mobilenav.dataset.visibility = 'false';
+function closenavOnResize(e) {
+    e.preventDefault();
+	mobilenav.dataset.visibility = 'false';
     mobilenav.style.display = 'none';
 }
+
+
